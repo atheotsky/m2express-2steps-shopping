@@ -1,0 +1,44 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+
+?>
+<div class="block newsletter">
+    <h3 class="block-title"><?= $block->escapeHtml(__('Sign up to our newsletter')) ?></h3>
+    <div class="content">
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <!-- <label class="label" for="newsletter"><span><?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?></span></label> -->
+                <div class="control">
+                    <input name="email" type="email" id="newsletter"
+                                placeholder="<?= $block->escapeHtmlAttr(__('Enter your e-mail address')) ?>"
+                                data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="action button primary" title="<?= $block->escapeHtmlAttr(__('Sign up')) ?>" type="submit">
+                  <?= $block->escapeHtml(__('Sign up')) ?>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="block block-follow-us">
+  <h3 class="block-title">Follow us on</h3>
+  <ul class="social">
+    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+  </ul>
+</div>

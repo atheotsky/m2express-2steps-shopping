@@ -1,0 +1,20 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="preconnect" src="//www.google-analytics.com" />
+        <link rel="apple-touch-icon" sizes="180x180" src="images/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" src="images/favicon-32x32.png" sizes="32x32"/>
+        <link rel="icon" type="image/png" src="images/favicon-16x16.png" sizes="16x16"/>
+        <link rel="manifest" src="images/site.webmanifest"/>
+        <link rel="mask-icon" src="images/safari-pinned-tab.svg"/>
+        <link rel="shortcut icon" src="images/favicon.ico"/>
+        <meta name="msapplication-config" content="images/browserconfig.xml"/>
+        <meta name="theme-color" content="#ffffff"/>
+        <meta name="msapplication-TileColor" content="#e3452c"/>
+        <css src="http://fast.fonts.net/cssapi/1b971b5b-14bd-4a4b-8ef0-6e23eb5b4183.css" src_type="url" />
+        <css src="https://cloud.typography.com/7947974/6975792/css/fonts.css" src_type="url" />
+    </head>
+</page>

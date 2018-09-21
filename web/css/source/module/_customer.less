@@ -1,0 +1,478 @@
+& when (@media-common = true) {
+  .account {
+    .sidebar-additional {
+      display: none;
+    }
+    .block-collapsible-nav {
+      .content {
+        background: none;
+        padding: 0;
+      }
+      .item {
+        margin: 0;
+        a,
+        strong {
+          padding: 0;
+          margin: 0;
+          border: 0;
+          line-height: 27px;
+          background: none !important;
+          &:hover {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .page-main {
+      position: relative;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+      .page-title-wrapper {
+        &::after {
+          content: "" !important;
+          display: block !important;
+        }
+        .page-title {
+          width: 100%;
+          margin: 0;
+          padding: 0 15px;
+          box-sizing: border-box;
+        }
+      }
+      > .columns {
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1300px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: auto;
+      }
+    }
+
+    .form-newsletter-manage {
+      .fieldset {
+        > br {
+          display: none;
+        }
+        .field {
+          padding: 26px 30px;
+          box-shadow: @boxShadow;
+          border-radius: 6px;
+        }
+        >.legend {
+          display: block;
+          float: none;
+          border: 0;
+          span {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .form-address-edit,
+    .form-edit-account {
+      box-shadow: @boxShadow;
+      border-radius: 6px;
+      > .actions-toolbar {
+        padding: 0 30px 30px;
+        .action.primary {
+          font-size: 15px;
+        }
+      }
+      >.fieldset {
+        width: 100%;
+        padding: 0 30px 30px;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        > br {
+          display: none;
+        }
+        >.legend {
+          border-bottom: 1px solid #ececec;
+          border-top: 1px solid #ececec;
+          margin: 0 -30px 28px;
+          display: block;
+          padding: 23px 30px;
+          float: none;
+          width: ~"calc(100% + 60px)";
+          span {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+        &:first-of-type {
+          > .legend {
+            border-top: 0;
+          }
+        }
+      }
+    }
+
+    .column.main {
+      .block:not(.widget) {
+        .block-title {
+          border: 0;
+          margin: 0 0 30px;
+          padding: 0;
+          > strong {
+            font-size: 18px;
+            font-weight: 600;
+          }
+          > .action {
+            font-size: 15px;
+            text-decoration: underline;
+            float: right;
+            margin-top: 4px;
+          }
+        }
+        .block-content {
+          box-shadow: @boxShadow;
+          border-radius: 6px;
+          .box {
+            margin-bottom: 0;
+          }
+        }
+        .box-title {
+          border-bottom: 1px solid #ececec;
+          margin: 0;
+          display: block;
+          padding: 23px 30px;
+          span {
+            font-size: 15px;
+          }
+        }
+        .box-actions {
+          padding: 0 30px 26px;
+          font-size: 15px;
+          line-height: 26px;
+          margin-top: 0;
+          .action {
+            display: block;
+            text-decoration: underline;
+            &:after {
+              display: none;
+            }
+          }
+        }
+        .box-content {
+          padding: 26px 30px;
+          font-size: 15px;
+          line-height: 26px;
+          + .box-actions {
+            margin-top: -26px;
+          }
+        }
+        .empty {
+          padding: 30px;
+        }
+      }
+    }
+    .orders-history {
+      border: 0;
+      box-shadow: @boxShadow;
+      border-radius: 6px;
+    }
+    .orders-history,
+    .orders-recent {
+      table {
+        tr {
+          th {
+            font-weight: 600;
+          }
+          th, td {
+            font-size: 15px;
+            padding: 26px 20px 24px;
+            line-height: normal;
+            &:first-child {
+              padding-left: 30px;
+            }
+          }
+          .action.order {
+            display: none;
+          }
+          .action.view {
+            text-decoration: underline;
+            &::after {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+    .table-wrapper.orders-recent {
+      margin: 0;
+    }
+
+    .order-details-items {
+      padding: 0;
+      border: 0;
+      clear: both;
+      margin-bottom: 60px;
+      .table-order-items {
+        .product-item-name {
+          margin-bottom: 0;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+      .col {
+        .price-excluding-tax {
+          .price {
+            font-size: 16px;
+            color: #333;
+          }
+        }
+      }
+      .items-qty {
+        .item {
+          display: block;
+        }
+      }
+      .table {
+        tr {
+          th, td {
+            font-size: 16px;
+            padding: 26px 20px 24px;
+            font-weight: 600;
+            line-height: normal;
+            &:first-child {
+              padding-left: 30px;
+            }
+          }
+        }
+        thead {
+          th {
+            font-size: 15px;
+          }
+        }
+        tbody {
+          tr {
+            border-bottom: 1px solid #ececec;
+          }
+          .items-qty {
+            .title {
+              display: none;
+            }
+          }
+        }
+        tfoot {
+          background: none;
+          tr {
+            td,
+            th {
+              background: none;
+              padding-top: 0;
+              padding-bottom: 0;
+              font-size: 15px;
+              line-height: 1.7;
+            }
+            &:first-child {
+              td,
+              th {
+                padding-top: 27px;
+              }
+            }
+            &:last-child {
+              td,
+              th {
+                padding-bottom: 27px;
+              }
+            }
+            &.grand_total {
+              td, th {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+      .table-wrapper {
+        border: 0;
+        box-shadow: @boxShadow;
+        border-radius: 6px;
+      }
+    }
+    .order-links {
+      display: none;
+    }
+  }
+
+  .sales-order-view {
+    .order-status {
+      display: none;
+    }
+    .order-date {
+      float: left;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .order-actions-toolbar {
+      margin-bottom: 30px;
+      .action.order {
+        display: none;
+      }
+      .action {
+        font-size: 15px;
+        text-decoration: underline;
+        display: inline-block;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .toolbar {
+    select {
+      background-color: transparent;
+    }
+  }
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .account {
+    .page-main {
+      padding-top: 408px;
+      .page-title-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    .column.main {
+      .block:not(.widget) {
+        .block-content {
+          .box {
+            width: 50%;
+          }
+        }
+      }
+    }
+    .form-address-edit,
+    .form-edit-account {
+      >.fieldset {
+        > .field {
+          max-width: 465px;
+        }
+      }
+    }
+    .order-details-items {
+      .table {
+        thead,
+        tbody {
+          th, td {
+            text-align: center !important;
+            &:first-child {
+              text-align: left !important;
+            }
+            &:last-child {
+              text-align: right !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .account {
+    .column.main {
+      .block:not(.widget) {
+        .box-title {
+          border-top: 1px solid #ececec;
+        }
+        .box {
+          &:first-of-type {
+            .box-title {
+              border-top: 0;
+            }
+          }
+        }
+      }
+    }
+    .page-main {
+      .page-title-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+    }
+    .page.messages {
+      margin: 0 !important;
+    }
+    .block-collapsible-nav {
+      background: #fff;
+      top: -1px;
+      z-index: 122;
+    }
+    .block-collapsible-nav {
+      .title {
+        padding: 15px 40px 12px 15px;
+        &:after {
+          line-height: .7;
+          font-size: 47px;
+          right: 3px;
+          top: 7px;
+        }
+      }
+      ul.nav {
+        padding: 13px 15px;
+      }
+      .item {
+        .delimiter {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+  .account {
+    .table-wrapper {
+      .table:not(.totals):not(.cart):not(.table-comparison)>tbody>tr {
+        padding: 13px 27px;
+        border-bottom: 1px solid #ececec;
+        td {
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+    .order-details-items {
+      .order-items tfoot {
+        padding-right: 6px;
+        tr {
+          display: -webkit-flex !important;
+          display: -ms-flex !important;
+          display: flex !important;
+          -webkit-justify-content: space-between !important;
+          -ms-justify-content: space-between !important;
+          justify-content: space-between !important;
+        }
+        .amount {
+          white-space: nowrap;
+          width: auto !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+& when (@media-common = true) {
+.page-wrapper .account .legend {
+  border: 0;
+}
+}

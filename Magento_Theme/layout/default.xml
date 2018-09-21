@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceContainer name="header.panel">
+            <block class="Magento\Cms\Block\Block" name="store_phone" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">store_phone</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="header_delivery_massage" after="store_phone">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">top_message</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">header links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="top.links">
+            <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Register</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_img_width" xsi:type="number">130</argument>
+                <argument name="logo_img_height" xsi:type="number">36</argument>
+            </arguments>
+        </referenceBlock>
+
+        <container name="footer-navigation" as="footer-navigation" label="Page Footer" htmlTag="div" htmlClass="footer-navigation">
+            <container name="footer-navigation-content" as="footer-navigation-content" label="Page Footer" htmlTag="div" htmlClass="footer wrap-header-links">
+                <block class="Magento\Cms\Block\Block" name="footer_nav">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer_nav</argument>
+                    </arguments>
+                </block>
+            </container>
+        </container>
+        <container name="static_header-account" as="static-header-account" label="Page header" htmlTag="div" htmlClass="wrap-header-links">
+            <block class="Magento\Cms\Block\Block" name="static_header_account">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header-account</argument>
+                </arguments>
+            </block>
+        </container>
+
+        <container name="static_header-top-links" as="static-header-top-links" label="Page header" htmlTag="div" htmlClass="header-top-links">
+            <block class="Magento\Cms\Block\Block" name="static_header_top_links">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header-top-links</argument>
+                </arguments>
+            </block>
+        </container>
+        <container name="static_header-top-left" as="static-header-top-left" label="Page header" htmlTag="div" htmlClass="header-top-left">
+            <block class="Magento\Cms\Block\Block" name="static_header_top_left">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header-top-left</argument>
+                </arguments>
+            </block>
+        </container>
+
+        <container name="static_header-bottom-right" as="static-header-bottom-right" label="Page header" htmlTag="div" htmlClass="header-bottom-right">
+            <block class="Magento\Cms\Block\Block" name="static_header_bottom_right">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header-bottom-right</argument>
+                </arguments>
+            </block>
+        </container>
+        
+        <container name="static_footer-links" as="static-footer-links" label="Page Footer" htmlTag="div" htmlClass="footer-links">
+            <container name="footer-links-content" as="footer-links-content" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <block class="Magento\Cms\Block\Block" name="static_block_footer_links">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer_links</argument>
+                    </arguments>
+                </block>
+            </container>
+        </container>
+        <container name="static_footer-services" as="static-footer-services" label="Page Footer" htmlTag="div" htmlClass="column column-services">
+            <block class="Magento\Cms\Block\Block" name="static_footer_services">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-services</argument>
+                </arguments>
+            </block>
+        </container>
+        <container name="static_footer-information" as="static-footer-information" label="Page Footer" htmlTag="div" htmlClass="column column-information">
+            <block class="Magento\Cms\Block\Block" name="static_footer_information">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-information</argument>
+                </arguments>
+            </block>
+        </container>
+        <container name="static_footer-customer-service" as="static-footer-customer-service" label="Page Footer" htmlTag="div" htmlClass="column column-customer-service">
+            <block class="Magento\Cms\Block\Block" name="static_footer_customer_service">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-customer-service</argument>
+                </arguments>
+            </block>
+        </container>
+        <container name="static_footer-followus" as="static-footer-followus" label="Page Footer" htmlTag="div" htmlClass="column column-followus">
+            <block class="Magento\Cms\Block\Block" name="static_footer_followus">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-followus</argument>
+                </arguments>
+            </block>
+        </container>
+        <container name="static_footer-newsletter" as="static-footer-newsletter" label="Page Footer" htmlTag="div" htmlClass="column column-newsletter">
+            <block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="subscribe.phtml" />
+            <!--<block class="Magento\Cms\Block\Block" name="static_footer_newsletter">-->
+                <!--<arguments>-->
+                    <!--<argument name="block_id" xsi:type="string">footer-newsletter</argument>-->
+                <!--</arguments>-->
+            <!--</block>-->
+        </container>
+        <!-- <container name="shop-bottom-banner" as="shop-bottom-banner" label="Page Footer" htmlTag="div" htmlClass="shop-bottom-banner">
+            <container name="shop-bottom-banner-content" as="shop-bottom-banner-content" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <block class="PerceptionSystem\Banner\Block\Banner" before="-" template="Magento_Theme::html/banner_footer.phtml" />
+            </container>
+        </container> -->
+        <container name="footer-bottom" as="footer-bottom" label="Page Footer" htmlTag="div" htmlClass="footer-bottom">
+            <container name="footer-bottom-content" as="footer-bottom-content" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <container name="footer-copyright" as="footer-copyright" label="Page Footer" after="-" htmlTag="div" htmlClass="column-copyright-full">
+                    <block class="Magento\Cms\Block\Block" name="footer_address">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-address</argument>
+                        </arguments>
+                    </block>
+                    <!-- <block class="Magento\Cms\Block\Block" name="footer_social">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_social</argument>
+                        </arguments>
+                    </block> -->
+                </container>
+            </container>
+        </container>
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="footer" remove="true" />
+        <referenceBlock name="header" remove="true" />
+        <referenceBlock name="skip_to_content" remove="true" />
+        <referenceBlock name="footer-links" remove="true" />
+        <referenceBlock name="copyright" remove="true" />
+        
+        <referenceBlock name="navigation.sections">
+            <block class="Magento\Cms\Block\Block" name="static_header_link_mobile">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">link-menu-mobile</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <!-- <referenceBlock name="minicart" remove="true" /> -->
+        <!-- <referenceBlock name="header.panel" remove="true" /> -->
+        <!--<move element="header.panel.wrapper" destination="page.wrapper" before="-" />-->
+        <move element="authorization-link" destination="header.links" before="register-link" />
+        <move element="static_header-account" destination="header-wrapper" after="top.search" />
+        <move element="minicart" destination="header.panel" after="-" />
+        
+        <move element="static_header_top_links" destination="header.panel" before="minicart" />
+        <move element="static_header_top_left" destination="header.panel" before="static_header_top_links" />
+        <move element="static_header_bottom_right" destination="header-wrapper" after="-" />
+
+        <move element="static_header_link_mobile" destination="header-wrapper" before="-" />
+        
+        <!-- <move element="shop-bottom-banner" destination="footer-container" before="-" /> -->
+        <move element="static_footer-links" destination="footer-container" after="footer-navigation" />
+        <move element="footer-bottom" destination="footer-container" after="static_footer-links" />
+        <move element="static_footer-services" destination="footer-bottom-content" before="-" />
+        <move element="static_footer-information" destination="footer-bottom-content" after="static_footer-services" />
+        <move element="static_footer-newsletter" destination="footer-bottom-content" before="footer-copyright" />
+        <move element="static_footer-customer-service" destination="footer-bottom-content" after="static_footer-information" />
+        <move element="static_footer-followus" destination="footer-bottom-content" after="static_footer-customer-service" />
+        <move element="footer-copyright" destination="footer-bottom-content" after="-" />
+
+        <move element="page.main.title" destination="page.top" after="navigation.sections" />
+        
+        <!-- <move element="copyright" destination="footer-copyright" after="footer_logos" /> -->
+    </body>
+</page>

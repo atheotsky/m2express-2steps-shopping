@@ -1,0 +1,501 @@
+& when (@media-common = true) {
+  .checkout-index-index {
+    .page-title-wrapper {
+      position: static;
+      clip: unset;
+      height: auto;
+      width: auto;
+      margin: 0;
+      background: none;
+      padding: 62px 0;
+      &::after {
+        display: none;
+      }
+      .page-title {
+        color: #333;
+        font-size: 36px;
+      }
+    }
+    .footer-bottom {
+      .column {
+        display: none;
+      }
+    }
+    .footer {
+    //  padding-top: 0;
+      address {
+      //  line-height: 1.7;
+      }
+    }
+    .page-main {
+      padding-bottom: 0;
+    }
+    .page-header {
+      border-bottom: 1px solid #ececec;
+      .logo {
+        margin: 0 auto;
+      }
+    }
+    .nav-sections,
+    .header-bottom-right {
+      display: none !important;
+    }
+    .header-top-links {
+      li {
+        display: none;
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+    .page-footer {
+    //  padding-bottom: 0 !important;
+      background: none !important;
+      .column-copyright-full {
+      //  padding-top: 0;
+      }
+    }
+    .opc-progress-bar,
+    .authentication-wrapper {
+      display: none;
+    }
+    .footer-address-card {
+    //  padding: 50px 0;
+      img {
+    //    display: block;
+      }
+    }
+  }
+  .checkout-billing-address {
+    .action.action-update {
+      float: none;
+      font-size: 12px;
+      padding: 9px 23px;
+      margin-right: 16px !important;
+      .gradient-secondary();
+    }
+    .action-cancel {
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .actions-toolbar {
+      padding-top: 30px;
+    }
+  }
+
+  #payment-method-billing-address {
+    .checkout-billing-address {
+      .action.action-edit-address {
+        font-size: 12px;
+        padding: 9px 23px;
+        margin-top: 10px;
+        .gradient-secondary();
+      }
+    }
+  }
+  
+  .opc-payment-additional.discount-code {
+    display: none;
+  }
+  .checkout-payment-method {
+    .actions-toolbar {
+      .primary {
+        float: none !important;
+      }
+    }
+    .payment-method-title {
+      label {
+        margin-bottom: 0;
+      }
+    }
+    .payment-method+.payment-method .payment-method-title {
+      border-top: 1px solid #ececec;
+    }
+    .field-select-billing, .billing-address-form {
+      max-width: 545px;
+    }
+    .payment-method-content > .actions-toolbar {
+      border-top: 1px solid #ececec;
+      padding-top: 30px;
+      div.primary {
+        .checkout {
+          width: 340px;
+          height: 59px;
+          font-size: 15px;
+          max-width: 100%;
+        }
+      }
+    }
+    .checkout-billing-address {
+      margin-bottom: 30px;
+    }
+  }
+
+  #payment_form_card {
+    padding-bottom: 27px;
+  }
+  
+  .opc-wrapper {
+    margin-bottom: 0 !important;
+    .form-login, 
+    .form-shipping-address {
+      max-width: none;
+    }
+    .step-title {
+      font-size: 18px;
+      font-weight: 600;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      border-top: 1px solid #ececec;
+      border-bottom: 1px solid #ececec !important;
+    }
+    .form.form-login {
+      max-width: none;
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .checkout-payment-method {
+    .payment-method-content {
+      padding: 0 0 27px;
+    }
+  }
+  .field-tooltip {
+    top: 6px;
+  }
+  .opc-block-summary {
+    background: none;
+    padding: 0;
+    > .title {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 21px 27px;
+      box-shadow: 0 9px 28px rgba(0,0,0,0.12);
+      position: relative;
+      z-index: -1;
+      border-top-left-radius: 5px;
+      width: ~'calc(100% - 1px)';
+      box-sizing: border-box;
+      border-top-right-radius: 5px;
+    }
+    .table-totals {
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+      border-bottom-left-radius: 5px;
+      margin-bottom: 32px;
+      position: relative;
+      background: #fff;
+      border-bottom-right-radius: 5px;
+      .totals.sub {
+        display: none;
+      }
+      .grand, .totals-tax-details {
+        .mark,
+        .amount {
+          font-size: 16px;
+          padding: 22px 27px;
+        }
+      }
+      tr.totals-tax-summary {
+      display:none;
+      }
+      tr.totals-tax-details {
+      display: table-row;
+      }
+    }
+    .block.items-in-cart {
+      box-shadow: 0 9px 28px rgba(0,0,0,0.12);
+      border-radius: 5px;
+      > .title {
+        font-weight: 600;
+        padding: 21px 27px;
+        strong {
+          font-size: 16px;
+          font-weight: 600;
+        }
+        &:after {
+          content: "\f078" !important;
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 900;
+          font-size: 16px;
+          color: #cecdcb;
+          right: 27px;
+          top: 50%;
+          margin: 0;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .minicart-items-wrapper {
+      padding: 0;
+      margin: 0;
+      .product-item {
+        padding: 27px !important;
+        .price {
+          font-size: 15px;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+      .details-qty {
+        font-size: 14px;
+      }
+      .product-item-name {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
+
+  .checkout-onepage-success {
+    .page-title-wrapper {
+      background-image: url('../images/checkout-success-banner.jpg');
+    }
+    .columns {
+      text-align: center;
+      padding-bottom: 0 !important;
+    }
+    .checkout-success {
+      box-shadow: 0px 15px 16px -16px rgba(0,0,0,0.12);
+    }
+    .checkout-success,
+    #registration {
+      padding: 80px 0;
+      > br {
+        display: none;
+      }
+      p {
+        margin-bottom: 0;
+        line-height: 27px;
+      }
+      div.primary {
+        float: none !important;
+      }
+      h3 {
+        font-size: 30px;
+        margin-bottom: 25px;
+      }
+      .button {
+        margin-top: 30px !important;
+        height: 59px;
+        min-width: 256px;
+        margin-right: 0 !important;
+      }
+    }
+    #registration {
+      [type="submit"] {
+        margin-top: 30px !important;
+        height: 59px;
+        min-width: 256px;
+        margin-right: 0 !important;
+        font-size: 15px;
+        font-family: @GothamRounded-b;
+        text-align: center;
+        padding: 21px 38px;
+        border-radius: 4px;
+        display: inline-block;
+        box-sizing: border-box;
+        font-weight: 600;
+        border: 0;
+        color: #fff;
+        .gradient-primary();
+      }
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .opc-sidebar {
+    width: 31.5%;
+    margin: 0;
+  }
+  .opc-wrapper {
+    padding-right: 36px;
+    width: 68.5%;
+  }
+  .checkout-index-index {
+    .footer-address-card {
+      .flex-display();
+      .justify-content(space-between);
+      .align-items(center);
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .checkout-index-index {
+    .page-header {
+      .header.content {
+        min-height: 60px;
+        padding-right: 15px;
+      }
+    }
+    #maincontent>.columns {
+      margin-bottom: 0;
+    }
+    .page-footer {
+      margin-top: 0;
+    }
+    .panel.header {
+      position: relative;
+      .minicart-wrapper {
+        display: none;
+      }
+      .header-top-links {
+        display: block;
+        float: right;
+        li {
+          margin-right: 0;
+          margin-top: 28px;
+          a {
+            font-size: 12px;
+            font-weight: 600;
+            color: #250c5f;
+          }
+        }
+        i {
+          margin: 0;
+          display: block;
+          text-align: center; 
+          font-size: 24px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+  
+  .checkout-payment-method {
+    .payment-methods {
+      margin: 0;
+    }
+  }
+
+  .checkout-payment-method {
+    .field-select-billing, 
+    .billing-address-form {
+      max-width: none !important;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .checkout-billing-address {
+      .primary {
+        .action-update {
+          width: auto;
+          display: inline-block;
+          margin-bottom: 0;
+        }
+        .action-cancel {
+          width: auto;
+          display: inline-block;
+          margin-top: 0;
+        }
+      }
+    }
+    .actions-toolbar {
+      div.primary {
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        .primary {
+          width: 100% !important;
+        }
+      }
+    }
+    .payment-method-content {
+      >.actions-toolbar {
+        // padding-left: 15px;
+        // padding-right: 15px;
+      }
+    }
+  }
+  .opc-estimated-wrapper {
+    margin: 0 0 30px;
+    background: none;
+    border: 0;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    .minicart-wrapper {
+      button.action.showcart {
+        margin-top: 14px;
+        &::before {
+          .gradient-primary();
+          content: "\f07a";
+          font-family: 'Font Awesome 5 Pro';
+          font-weight: 900;
+          color: @2ndColor;
+          margin-right: 4px;
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 26px;
+          margin: 0px 0 3px;
+        }
+      }
+    }
+  }
+
+  .opc-wrapper {
+    .step-title,
+    form.form.form-login {
+      padding-left: 15px;
+      padding-right: 15px;
+      background: none !important;
+    }
+  }
+  #token_container {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .checkout-onepage-success {
+    #registration {
+      [type="submit"] {
+        width: 100%;
+      }
+    }
+  }
+  
+}
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+  .checkout-index-index {
+    .panel.header {
+      .header-top-links {
+        li {
+          margin-top: 32px !important;
+          a {
+            font-size: 10px !important;
+            i {
+              font-size: 20px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .opc-estimated-wrapper {
+    .minicart-wrapper {
+      button.action.showcart {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+
+
+& when (@media-common = true) {
+#worldpay-payments-card-form {
+iframe {
+    width: 100% !important;
+}
+#token_container_holder {
+  width: 100%;
+}
+}
+}

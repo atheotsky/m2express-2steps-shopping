@@ -1,0 +1,332 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Email extend styles
+//  _____________________________________________
+
+//  This file should be used for theme-specific styles for emails that extend or modify the styles in _email.less
+//  This will allow you to edit email styles without copying and editing the _email.less file
+
+//  Importing fonts from an external CSS file, rather than embedding @font-face declarations inside the <style> tag,
+//  as the latter will cause font rendering issues if the web fonts are inaccessible.
+
+// @import url("@{baseUrl}css/email-fonts.css");
+
+
+@screen__xs: 50000px;
+@screen__ct: 800px;
+
+// .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .wrapper {
+      background: #fff;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+      font-weight: 700;
+    }
+
+    .main {
+      width: 800px !important;
+    }
+    p {
+      font-size: 15px;
+      line-height: 26px;
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 1px solid #ececec;
+      padding: 75px 0 30px;
+    }
+
+    .email-intro {
+      border-bottom: 1px solid #ececec;
+      text-align: center;
+      .greeting {
+        font-size: 34px;
+        font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+        font-weight: 700;
+        margin-bottom: 27px;
+      }
+      > td {
+        padding-top: 50px;
+        padding-bottom: 55px !important;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .py-60 {
+      padding: 68px 0 60px;
+    }
+    .pt-60 {
+      padding-top: 68px;
+    }
+    .pb-60 {
+      padding-bottom: 68px;
+    }
+    .email-summary {
+      text-align: center;
+      .title {
+        margin: 0;
+        font-size: 30px;
+      }
+    }
+
+    .box-shadow {
+      box-shadow: 0 9px 28px rgba(0,0,0,0.12);
+      border-radius: 5px;
+      border: 1px solid #ececec;
+      overflow: hidden;
+    }
+    .txt-thank-you {
+      padding-right: 9%;
+      padding-left: 9%;
+    }
+    .wrap-email-items {
+      .email-items {
+        width: 100%;
+        thead{
+          tr{
+            th {
+              font-weight: 700;
+              line-height: 1.1;
+              font-size: 15px;
+              margin-top: 0;
+              margin-bottom: 10px;
+              font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+              margin: 0 !important;
+              padding: 26px 30px;
+              border-bottom: 1px solid #ececec;
+            }
+          }
+        }
+        .item-qty {
+          overflow: hidden;
+          text-indent: -10000000px;
+        }
+        tbody {
+          tr {
+            td {
+              padding: 26px 30px !important;
+              font-size: 16px;
+              font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+              font-weight: 700;
+            }
+            .item-info {
+              text-align: left;
+            }
+          }
+          .item-options {
+            padding: 0 !important;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            em {
+              font-style: normal;
+              &::after {
+                content: ":";
+              }
+            }
+            dt {
+              float: left;
+              min-width: 101px;
+            }
+            dd {
+              font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+              font-weight: normal;
+              overflow: hidden;
+              padding-left: 0;
+            }
+          }
+        }
+        .order-totals {
+          width: auto;
+          float: none;
+          font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+          font-weight: 700;
+          border-top: 1px solid #ececec;
+          tr {
+            td,
+            th {
+              background: none;
+              border: 0;
+              padding-left: 30px;
+              padding-right: 30px;
+              font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+              font-weight: 700;
+            }
+            &.subtotal {
+              th,
+              td {
+                font-size: 15px;
+                padding-top: 32px;
+                padding-bottom: 5px;
+              }
+            }
+            &.grand_total {
+              th,
+              td {
+                font-size: 18px;
+                padding-bottom: 36px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .order-details-title {
+      text-align: center;
+      width: 100%;
+      .title {
+        font-size: 30px;
+        margin: 0 0 5px;
+      }
+      p {
+        margin: 0;
+        font-size: 16px;
+      }
+    }
+
+    .table-order-items {
+      box-shadow: 0 9px 28px rgba(0,0,0,0.12);
+      border-radius: 5px;
+      width: 100%;
+      font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+      thead {
+        th {
+          padding: 26px 30px;
+          font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          border-bottom: 1px solid #ececec;
+        }
+        .name {
+          text-align: left;
+        }
+        .subtotal {
+          text-align: right;
+        }
+      }
+      tbody {
+        td {
+          padding: 26px 30px;
+          border-bottom: 1px solid #ececec;
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+      tfoot {
+        td {
+          padding: 26px 30px;
+        }
+      }
+    }
+
+    .email-information .order-details {
+      width: 100%;
+      // box-shadow: 0 9px 28px rgba(0,0,0,0.12);
+      // border-radius: 5px;
+      .address-details, 
+      .method-info {
+        width: 50% !important;
+        float: left;
+        padding: 0 !important;
+        h3 {
+          margin: 0 !important;
+          font-size: 15px;
+          padding: 26px 30px;
+          font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+          font-weight: 700;
+          border-bottom: 1px solid #ececec;
+        }
+        .content-info {
+          padding: 26px 30px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .footer {
+      padding: 40px 0 70px;
+      .closing {
+        float: left;
+        margin: 0;
+        font-size: 16px;
+      }
+      .social {
+        float: right;
+        span {
+          font-family: "Arial Rounded MT","VAG rounded",arial,helvetica,sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          font-weight: 700;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        a {
+          display: inline-block;
+          margin-left: 16px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    // .header,
+    // .main-content,
+    // .footer {
+    //     padding: @email-body__padding @indent__s !important;
+    // }
+    .main-content {
+      padding: 30px 0;
+    }
+    .footer {
+        td {
+            display: block;
+            width: auto !important;
+        }
+    }
+    table.button {
+      margin: 20px 0 10px;
+    }
+    .button {
+      .inner-wrapper {
+        td {
+          a {
+            display: block;
+            padding: 16px;
+          }
+        }
+      }
+    }
+
+// }
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__ct) {
+  .footer {
+    .closing {
+      padding-bottom: 20px;
+    }
+    .closing,
+    .social {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .email-information .order-details {
+    .address-details, 
+    .method-info {
+      width: 100% !important;
+      float: none;
+    }
+  }
+
+}
