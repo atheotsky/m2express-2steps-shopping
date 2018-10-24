@@ -9,6 +9,9 @@
     <body>
         <referenceContainer name="content">
             <referenceBlock name="page.main.title" display="false"/>
+            <block as="home.product" class="M2express\Home2Steps\Block\HomeProduct" name="home.product" template="M2express_Home2Steps::homeproduct.phtml">
+                <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="home.product.addto" as="addto" />
+            </block>
         </referenceContainer> 
     </body>
 </page>
