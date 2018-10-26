@@ -6,7 +6,13 @@
 */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magento_Swatches::css/swatches.css"/>
+    </head>
     <body>
+        <referenceBlock name="homepage.swatchrenderer">
+            <block class="Magento\Swatches\Block\Product\Renderer\Listing\Configurable" as="configurable" template="M2express_Home2Steps::product/listing/renderer.phtml" />
+        </referenceBlock>
         <referenceContainer name="content">
             <referenceBlock name="header.panel">
                 <block class="Magento\Framework\View\Element\Template" name="catalog.compare.link" after="minicart"
@@ -14,6 +20,9 @@
             </referenceBlock>
             <referenceBlock name="page.main.title" display="false"/>
             <block as="home.product" class="M2express\Home2Steps\Block\HomeProduct" name="home.product" template="M2express_Home2Steps::homeproduct.phtml">
+                <block class="Magento\Framework\View\Element\RendererList" name="homepage.swatchrenderer" as="homepage.toprenderers">
+                    <block class="Magento\Framework\View\Element\Template" as="default"/>
+                </block>
                 <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="home.product.addto" as="addto">
                     <block class="M2express\ProductQuickLook\Block\QuickLook" as="quicklook"
                            name="product.quicklook"
