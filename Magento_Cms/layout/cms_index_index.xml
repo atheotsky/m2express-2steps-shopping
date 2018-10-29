@@ -20,6 +20,14 @@
             </referenceBlock>
             <referenceBlock name="page.main.title" display="false"/>
             <block as="home.product" class="M2express\Home2Steps\Block\HomeProduct" name="home.product" template="M2express_Home2Steps::homeproduct.phtml">
+
+                <block class="M2express\Home2Steps\Block\Catalog\Product\View\Type\Bundle" name="product.info.bundle.options" as="type_bundle_options" template="M2express_Home2Steps::catalog/product/view/type/bundle/options.phtml" before="-">
+                    <block class="M2express\Home2Steps\Block\Catalog\Product\View\Type\Bundle\Option\Select" name="home.product.options.select" as="select"/>
+                    <block class="M2express\Home2Steps\Block\Catalog\Product\View\Type\Bundle\Option\Multi" name="home.product.options.multi" as="multi"/>
+                    <block class="M2express\Home2Steps\Block\Catalog\Product\View\Type\Bundle\Option\Radio" name="home.product.options.radio" as="radio" />
+                    <block class="M2express\Home2Steps\Block\Catalog\Product\View\Type\Bundle\Option\Checkbox" name="home.product.options.checkbox" as="checkbox"/>
+                </block>
+
                 <block class="Magento\Framework\View\Element\RendererList" name="homepage.swatchrenderer" as="homepage.toprenderers">
                     <block class="Magento\Framework\View\Element\Template" as="default"/>
                 </block>
