@@ -39,10 +39,13 @@
                            template="M2express_ProductCompare::compare.phtml" after="product.quicklook" />
                 </block>
             </block>
+            <block as="home.custom.block" class="M2express\Home2Steps\Block\Homeblock" name="home.custom.block" template="M2express_Home2Steps::homeblock.phtml" after="home.product"/>
         </referenceContainer>
         <referenceContainer name="before.body.end">
+            <block class="M2express\Home2Steps\Block\Initialize" name="product.home2steps.initialize" template="M2express_Home2Steps::initialize.phtml"/>
             <block class="M2express\ProductQuickLook\Block\Initialize" name="product.quicklook.initialize" template="M2express_ProductQuickLook::initialize.phtml"/>
             <block class="M2express\ProductCompare\Block\Initialize" name="product.quick_compare.initialize" template="M2express_ProductCompare::initialize.phtml"/>
+            <block class="M2express\ProductFilter\Block\Filter" name="onepage.filter.link" after="minicart" template="M2express_ProductFilter::filter_top_bar.phtml" />
         </referenceContainer>
     </body>
 </page>
